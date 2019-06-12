@@ -7,9 +7,9 @@ C:\Users\benji\documents\visual studio 2013\Projects\VHT Accountant\VHT Accounta
 C:\Users\benji\documents\visual studio 2013\Projects\VHT Accountant\VHT Accountant\bin\Debug\MySql.Data.dll
 C:\Users\benji\documents\visual studio 2013\Projects\VHT Accountant\VHT Accountant\obj\Debug\VHT Accountant.exe
 C:\Users\benji\documents\visual studio 2013\Projects\VHT Accountant\VHT Accountant\obj\Debug\VHT Accountant.pdb
-C:\Users\benji\documents\visual studio 2013\Projects\VHT Accountant\VHT Accountant\bin\Debug\VHTDatabase.db
 C:\Users\benji\documents\visual studio 2013\Projects\VHT Accountant\VHT Accountant\bin\Debug\Dapper.dll
 C:\Users\benji\documents\visual studio 2013\Projects\VHT Accountant\VHT Accountant\bin\Debug\System.Data.SQLite.dll
 C:\Users\benji\documents\visual studio 2013\Projects\VHT Accountant\VHT Accountant\bin\Debug\Dapper.xml
 C:\Users\benji\documents\visual studio 2013\Projects\VHT Accountant\VHT Accountant\bin\Debug\System.Data.SQLite.xml
 C:\Users\benji\documents\visual studio 2013\Projects\VHT Accountant\VHT Accountant\obj\Debug\VHT Accountant.csprojResolveAssemblyReference.cache
+C:\Users\benji\documents\visual studio 2013\Projects\VHT Accountant\VHT Accountant\bin\Debug\VHTDatabase.db

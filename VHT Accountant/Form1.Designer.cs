@@ -42,9 +42,7 @@
             this.whomTxt = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.noteTxt = new System.Windows.Forms.TextBox();
-            this.whatTxt = new System.Windows.Forms.TextBox();
             this.catTxt = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.moneyBackCheck = new System.Windows.Forms.CheckBox();
@@ -54,19 +52,26 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.searchAllBtn = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
+            this.searchDate = new System.Windows.Forms.MonthCalendar();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataView = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.clearbtn = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataView)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -113,16 +118,14 @@
             this.tableLayoutPanel2.Controls.Add(this.priceTxt, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.label6, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.whomTxt, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.label7, 0, 6);
-            this.tableLayoutPanel2.Controls.Add(this.noteTxt, 1, 6);
-            this.tableLayoutPanel2.Controls.Add(this.whatTxt, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.catTxt, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.label9, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.label7, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.noteTxt, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.catTxt, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.textBox2, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.label10, 4, 5);
             this.tableLayoutPanel2.Controls.Add(this.moneyBackCheck, 5, 5);
             this.tableLayoutPanel2.Controls.Add(this.dayPicker, 4, 1);
-            this.tableLayoutPanel2.Controls.Add(this.sendBtn, 0, 7);
+            this.tableLayoutPanel2.Controls.Add(this.sendBtn, 0, 6);
             this.tableLayoutPanel2.Controls.Add(this.searchIDBtn, 4, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 33);
@@ -136,6 +139,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(786, 409);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
@@ -221,14 +225,13 @@
             // 
             // priceTxt
             // 
-            this.tableLayoutPanel2.SetColumnSpan(this.priceTxt, 2);
+            this.tableLayoutPanel2.SetColumnSpan(this.priceTxt, 3);
             this.priceTxt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.priceTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
             this.priceTxt.Location = new System.Drawing.Point(115, 156);
             this.priceTxt.Name = "priceTxt";
-            this.priceTxt.Size = new System.Drawing.Size(218, 47);
+            this.priceTxt.Size = new System.Drawing.Size(330, 47);
             this.priceTxt.TabIndex = 3;
-            this.priceTxt.Text = "price";
             // 
             // label6
             // 
@@ -243,22 +246,21 @@
             // 
             // whomTxt
             // 
-            this.tableLayoutPanel2.SetColumnSpan(this.whomTxt, 2);
+            this.tableLayoutPanel2.SetColumnSpan(this.whomTxt, 3);
             this.whomTxt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.whomTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
             this.whomTxt.FormattingEnabled = true;
             this.whomTxt.Location = new System.Drawing.Point(115, 207);
             this.whomTxt.MinimumSize = new System.Drawing.Size(220, 0);
             this.whomTxt.Name = "whomTxt";
-            this.whomTxt.Size = new System.Drawing.Size(220, 47);
+            this.whomTxt.Size = new System.Drawing.Size(330, 47);
             this.whomTxt.TabIndex = 9;
-            this.whomTxt.Text = "who";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Location = new System.Drawing.Point(3, 306);
+            this.label7.Location = new System.Drawing.Point(3, 255);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(106, 51);
             this.label7.TabIndex = 19;
@@ -267,47 +269,24 @@
             // 
             // noteTxt
             // 
-            this.tableLayoutPanel2.SetColumnSpan(this.noteTxt, 2);
+            this.tableLayoutPanel2.SetColumnSpan(this.noteTxt, 3);
             this.noteTxt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.noteTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
-            this.noteTxt.Location = new System.Drawing.Point(115, 309);
+            this.noteTxt.Location = new System.Drawing.Point(115, 258);
             this.noteTxt.Name = "noteTxt";
-            this.noteTxt.Size = new System.Drawing.Size(218, 47);
+            this.noteTxt.Size = new System.Drawing.Size(330, 47);
             this.noteTxt.TabIndex = 16;
-            this.noteTxt.Text = "Note";
-            // 
-            // whatTxt
-            // 
-            this.tableLayoutPanel2.SetColumnSpan(this.whatTxt, 2);
-            this.whatTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.whatTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.whatTxt.Location = new System.Drawing.Point(115, 105);
-            this.whatTxt.Name = "whatTxt";
-            this.whatTxt.Size = new System.Drawing.Size(218, 47);
-            this.whatTxt.TabIndex = 21;
             // 
             // catTxt
             // 
-            this.tableLayoutPanel2.SetColumnSpan(this.catTxt, 2);
+            this.tableLayoutPanel2.SetColumnSpan(this.catTxt, 3);
             this.catTxt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.catTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
             this.catTxt.FormattingEnabled = true;
-            this.catTxt.Location = new System.Drawing.Point(115, 258);
+            this.catTxt.Location = new System.Drawing.Point(115, 105);
             this.catTxt.Name = "catTxt";
-            this.catTxt.Size = new System.Drawing.Size(218, 47);
+            this.catTxt.Size = new System.Drawing.Size(330, 47);
             this.catTxt.TabIndex = 8;
-            this.catTxt.Text = "type";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Location = new System.Drawing.Point(3, 255);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(106, 51);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "種類";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBox2
             // 
@@ -350,9 +329,10 @@
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.sendBtn, 7);
             this.sendBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sendBtn.Location = new System.Drawing.Point(3, 360);
+            this.sendBtn.Location = new System.Drawing.Point(3, 309);
             this.sendBtn.Name = "sendBtn";
-            this.sendBtn.Size = new System.Drawing.Size(780, 46);
+            this.tableLayoutPanel2.SetRowSpan(this.sendBtn, 2);
+            this.sendBtn.Size = new System.Drawing.Size(780, 97);
             this.sendBtn.TabIndex = 13;
             this.sendBtn.Text = "Send";
             this.sendBtn.UseVisualStyleBackColor = true;
@@ -393,9 +373,9 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.56522F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Controls.Add(this.button6, 2, 3);
-            this.tableLayoutPanel3.Controls.Add(this.button5, 2, 2);
+            this.tableLayoutPanel3.Controls.Add(this.searchAllBtn, 2, 2);
             this.tableLayoutPanel3.Controls.Add(this.button7, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.monthCalendar2, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.searchDate, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.comboBox1, 2, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(795, 33);
@@ -419,16 +399,17 @@
             this.button6.Text = "Current Month All Info";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // searchAllBtn
             // 
-            this.tableLayoutPanel3.SetColumnSpan(this.button5, 2);
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.Location = new System.Drawing.Point(395, 207);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(388, 96);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Search";
-            this.button5.UseVisualStyleBackColor = true;
+            this.tableLayoutPanel3.SetColumnSpan(this.searchAllBtn, 2);
+            this.searchAllBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchAllBtn.Location = new System.Drawing.Point(395, 207);
+            this.searchAllBtn.Name = "searchAllBtn";
+            this.searchAllBtn.Size = new System.Drawing.Size(388, 96);
+            this.searchAllBtn.TabIndex = 1;
+            this.searchAllBtn.Text = "Search";
+            this.searchAllBtn.UseVisualStyleBackColor = true;
+            this.searchAllBtn.Click += new System.EventHandler(this.searchAllBtn_Click);
             // 
             // button7
             // 
@@ -440,12 +421,13 @@
             this.button7.TabIndex = 4;
             this.button7.Text = "Last Month All Info";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // monthCalendar2
+            // searchDate
             // 
-            this.monthCalendar2.Location = new System.Drawing.Point(51, 9);
-            this.monthCalendar2.Name = "monthCalendar2";
-            this.monthCalendar2.TabIndex = 0;
+            this.searchDate.Location = new System.Drawing.Point(51, 9);
+            this.searchDate.Name = "searchDate";
+            this.searchDate.TabIndex = 0;
             // 
             // comboBox1
             // 
@@ -466,9 +448,9 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 72F));
-            this.tableLayoutPanel4.Controls.Add(this.dataGridView1, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.dataView, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.button3, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button4, 2, 1);
+            this.tableLayoutPanel4.Controls.Add(this.clearbtn, 2, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 448);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -478,17 +460,26 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1578, 410);
             this.tableLayoutPanel4.TabIndex = 4;
             // 
-            // dataGridView1
+            // dataView
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableLayoutPanel4.SetColumnSpan(this.dataGridView1, 2);
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.tableLayoutPanel4.SetRowSpan(this.dataGridView1, 2);
-            this.dataGridView1.Size = new System.Drawing.Size(1500, 404);
-            this.dataGridView1.TabIndex = 0;
+            this.dataView.AllowUserToAddRows = false;
+            this.dataView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7});
+            this.tableLayoutPanel4.SetColumnSpan(this.dataView, 2);
+            this.dataView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataView.Location = new System.Drawing.Point(3, 3);
+            this.dataView.Name = "dataView";
+            this.tableLayoutPanel4.SetRowSpan(this.dataView, 2);
+            this.dataView.Size = new System.Drawing.Size(1500, 404);
+            this.dataView.TabIndex = 0;
             // 
             // button3
             // 
@@ -500,15 +491,51 @@
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // clearbtn
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Location = new System.Drawing.Point(1509, 208);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(66, 199);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.clearbtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clearbtn.Location = new System.Drawing.Point(1509, 208);
+            this.clearbtn.Name = "clearbtn";
+            this.clearbtn.Size = new System.Drawing.Size(66, 199);
+            this.clearbtn.TabIndex = 2;
+            this.clearbtn.Text = "清除";
+            this.clearbtn.UseVisualStyleBackColor = true;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "支出/收入";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "備註";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "價錢";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "邊個出/入";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "類別";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "拎返錢未";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "幾時";
+            this.Column7.Name = "Column7";
             // 
             // Form1
             // 
@@ -525,7 +552,7 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -548,23 +575,21 @@
         private System.Windows.Forms.Button sendBtn;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox noteTxt;
-        private System.Windows.Forms.TextBox whatTxt;
         private System.Windows.Forms.ComboBox catTxt;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.MonthCalendar dayPicker;
         private System.Windows.Forms.CheckBox moneyBackCheck;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.MonthCalendar monthCalendar2;
+        private System.Windows.Forms.MonthCalendar searchDate;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataView;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button clearbtn;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button searchAllBtn;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.BindingSource moneyIOBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn midDataGridViewTextBoxColumn;
@@ -576,6 +601,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn inOrOutDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn moneyBackYetDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }
 
